@@ -168,7 +168,13 @@
     public | userinfo    | table | postgres
     (2 rows)
 
-
+# How to push to github
+  > + git init
+  > + git add .
+  > + git commit -m "Initial commit"
+  > + create a github repository to hold this project
+  > + git remote add origin <project url>
+  > + git push -f origin master
 
 
   

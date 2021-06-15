@@ -13,7 +13,7 @@ func sqlOpen() {
 	var err error
 	// db, err = sql.Open("postgres", "port=5432 user=postgres password=mypass dbname=main sslmode=disable")
 	db, err = sql.Open("postgres", "port=5432 user=postgres password=mypass dbname=postgres sslmode=disable")
-	//port是数据库的端口号，默认是5432，如果改了，这里一定要自定义；
+	//port是数据库的端口号，默认是5432，如果改了，这里一定要自定义;
 	//user就是你数据库的登录帐号;
 	//dbname就是你在数据库里面建立的数据库的名字;
 	//sslmode就是安全验证模式;
