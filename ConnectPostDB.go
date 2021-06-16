@@ -12,7 +12,7 @@ var db *sql.DB
 func sqlOpen() {
 	var err error
 	// db, err = sql.Open("postgres", "port=5432 user=postgres password=mypass dbname=main sslmode=disable")
-	db, err = sql.Open("postgres", "port=5432 user=postgres password=mypass dbname=postgres sslmode=disable")
+	db, err = sql.Open("postgres", "port=5432 user=rttest password=mypass dbname=rtdb sslmode=disable")
 	//port是数据库的端口号，默认是5432，如果改了，这里一定要自定义;
 	//user就是你数据库的登录帐号;
 	//dbname就是你在数据库里面建立的数据库的名字;
@@ -24,10 +24,10 @@ func sqlOpen() {
 }
 func sqlInsert() {
 	//插入数据
-	stmt, err := db.Prepare("INSERT INTO userinfo(username,departname,created) VALUES($1,$2,$3) RETURNING uid")
+	stmt, err := db.Prepare("INSERT INTO userinfo(username,departname,created, uid) VALUES($1,$2,$3, $4) RETURNING uid")
 	checkErr(err)
 
-	res, err := stmt.Exec("ficow", "软件开发部门", "2021-03-09")
+	res, err := stmt.Exec("ficow", "软件开发部门", "2021-03-09", 3)
 	//这里的三个参数就是对应上面的$1,$2,$3了
 
 	checkErr(err)
