@@ -2,7 +2,6 @@ FROM postgres:13-alpine
 
 USER postgres
 
-COPY docker-entrypoint.sh /usr/local/bin/
 COPY init_tables.sql /docker-entrypoint-initdb.d/
 
 EXPOSE 5432
