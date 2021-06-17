@@ -89,15 +89,15 @@
 
 # Build our own "postgres" image
   
-    docker build -t my-alpine-postgres .
+    docker build -t leiwang008/alpine_postgres .
 
 # Start our image
 
-    docker run --name my-postgres --publish 5432:5432 -d my-alpine-postgres
+    docker run --name alpine_postgres --publish 5432:5432 -d leiwang008/alpine_postgres:latest
 
 > + connect the container by sehll 
 
-      docker exec -it postgres-db sh
+      docker exec -it alpine_postgres sh
 
  > + Connect database  
 
