@@ -38,3 +38,8 @@
     + with user 'rttest' and database 'rtdb':
         `psql -U -d rtdb`  
 
+
+  > Check databases and tables in PostgreSQL interactive terminal  
+    + check databases: `\l` or `\list`  
+    + check tables: `\dt`  
+    + change current database: `\c <dbname>`  
