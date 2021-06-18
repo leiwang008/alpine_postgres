@@ -36,10 +36,12 @@
     + with user 'rttest' and database 'rttest':
         `psql -U rttest`  
     + with user 'rttest' and database 'rtdb':
-        `psql -U -d rtdb`  
+        `psql -U rttest -d rtdb`  
 
 
   > Check databases and tables in PostgreSQL interactive terminal  
+    + show current database `select current_database();`  
+    + show current user `select user;`  
     + check databases: `\l` or `\list`  
     + check tables: `\dt`  
-    + change current database: `\c <dbname>`  
+    + change current database: `\c <dbname>`  or `\connect <dbname>`
