@@ -17,7 +17,7 @@
 
   > start with the default user 'rttest' and default database 'rttest'
 
-    docker run --name alpine_postgres -p 5432:5432 -e POSTGRES_PASSWORD=mypass -ePOSTGRES_USER=rttest -d leiwang008/alpine_postgres postgres    
+    docker run --name alpine_postgres -p 5432:5432 -e POSTGRES_PASSWORD=mypass -e POSTGRES_USER=rttest -d leiwang008/alpine_postgres postgres    
 
   > start with the default user 'rttest' and default database 'rtdb'
 
