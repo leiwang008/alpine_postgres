@@ -28,13 +28,13 @@
 
     docker exec -it alpine_postgres bash
 
-  > Open PostgreSQL interactive terminal
-    >> with user 'postgres' and database 'postgres': 
+  > Open PostgreSQL interactive terminal  
+    + with user 'postgres' and database 'postgres': 
         `psql -U postgres`  
-    >> with user 'postgres' and database 'rtdb': 
+    + with user 'postgres' and database 'rtdb': 
         `psql -U postgres -d rtdb`  
-    >> with user 'rttest' and database 'rttest':
+    + with user 'rttest' and database 'rttest':
         `psql -U rttest`  
-    >> with user 'rttest' and database 'rtdb':
+    + with user 'rttest' and database 'rtdb':
         `psql -U -d rtdb`  
 
