@@ -7,6 +7,9 @@
     docker build -t leiwang008/alpine_postgres .
 
 # Run image to start database
+
+  <font color="red">*NOTE:* The environment 'POSTGRES_PASSWORD' MUST be specified!</font>  
+
   > start with the default user 'postgres' and default database 'postgres'
         
     docker run --name alpine_postgres -p 5432:5432 -e POSTGRES_PASSWORD=mypass -d leiwang008/alpine_postgres postgres
