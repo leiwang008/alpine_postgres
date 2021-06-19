@@ -93,7 +93,13 @@
 
 # Start our image
 
+  In detached mode:  
+
     docker run --name alpine_postgres --publish 5432:5432 -d leiwang008/alpine_postgres:latest
+
+  Or in interactive mode:
+
+    docker run --name alpine_postgres --publish 5432:5432 --rm -it leiwang008/alpine_postgres postgres
 
 > + connect the container by sehll 
 
